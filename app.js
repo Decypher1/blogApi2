@@ -1,6 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const config = require("./config/config")
+const CONFIG = require("./config/config")
 const dbConnect = require("./db/mongodb")
 
 const app = express()
@@ -17,6 +17,6 @@ app.get("/", (req, res) => {
     res.send("Welcome to my blog")
 })
 
-app.listen(config.PORT, () => {
-    console.log(`Server is running on http://localhost:${config.PORT}`)
+app.listen(CONFIG.PORT, () => {
+    console.log(`Server is running on http://localhost:${CONFIG.PORT}`)
 })
